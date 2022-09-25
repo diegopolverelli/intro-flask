@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Home Page (incrustado en home.html)</h1> 
+    <h2>{{mensaje}}</h2>   
+    <h3>{{mensaje2}}</h3>  
+    <h3>{{usuarios}}</h3>   
+
+    <h3>{{usuarios[0][1]}}</h3>   
+    <h3>{{usuarios[0][2]}}</h3>   
+
+    <ul>
+
+        {% for usuario in usuarios %}
+            <li>{{usuario['username']}}: {{usuario['email']}}</li>
+        {% endfor %}
+    
+    </ul>
+
+
+{% endblock %}
+
+
+{% block title %}
+
+    {{titulo}}
+
+{% endblock %}
